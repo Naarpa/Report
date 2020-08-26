@@ -1,0 +1,120 @@
+\documentclass[a4paper,12pt]{report}
+\usepackage{graphicx}
+\setcounter{chapter}{0}
+
+\begin{document}
+
+	\begin{center}
+			\textbf {\Large Project Name : Automated Currency Detector} \\  \large \indent \\ \indent \\  by \\ \indent \\ \indent \\ Mr. Chinarom Hannarong "6011064" \\
+			Ms. Naarpa Kitthanasiri "6037526" \\
+			\indent \\ \indent \\ 
+			A report submitted in partial fulfillment of the requirements for 
+			The degree of Bachelor of Engineering in
+			Telecommunications Engineering and
+			Computers Engineering \\ \indent \\ \indent \\ \indent \\
+			
+			Project Advisor :
+			Mr. Amulya Bhattarai \\ \indent \\ \indent \\ \indent \\
+			
+			Examination Committee: \\ \indent \\ \indent \\
+			
+			Dr. Jerapong Rojanarowan, Dr. Wisuwat Plodpradista,
+			Assoc. Prof. Dr. Jiradech Kongthon, Mr. Sunchanan Charanyananda,
+			Mr. Amulya Bhattarai, Mr. Ehsan Ali \\ \indent \\ \indent \\
+			\indent \\
+			
+			Assumption University
+			Vincent Mary School of Engineering
+			Thailand
+			October 2020
+	\end{center}
+\newpage 
+\indent \\ \\ \\ \\   \large Approved by Project Advisor: \\ \\ \\ \\  \indent \hspace{205}  \large Name: Amulya Bhattarai \indent \\ \indent \hspace{205}  \large Signature: \indent \\ \indent \\ \indent \hspace{205}  \large Date: $\rule{5cm}{0.15mm}$
+
+\indent \\ \\ \\ \\ \\ \\      \large Plagiarism verified by: \\ \\ \\ \\  \indent \hspace{205}  \large Name: Mr.Ehsan Ali \indent \\ \indent \hspace{205} \\ \indent \hspace{205}   Signature: \indent \\ \indent \\ \indent \hspace{205}  \large Date:$\rule{5cm}{0.15mm}$
+
+\newpage
+\begin{center}
+	\textbf {\Large ABSTRACT}
+\end{center}
+\hspace{5} \large
+This project entitled to “A study on the process of how to classify the banknote categories by using image processing technique”. The main objective of this project is to extract paper currency denomination. It’s the process that classify the type of banknotes from a bunch of it. The extracted Region of Interest (ROI) can be used with Pattern Recognition and Neural Networks matching technique. Firstly, we get the image from a raspberry PI on fixed Dot Per Inch (DPI) with a particular size, the pixel level is set to obtain image. After that, we apply the filters including Sobel Edge detector, Average Filter, and Laplacian Filter to extract denomination value of notes. Moreover, we use different pixel levels in different denomination notes in order to make it easier for classification. Somehow, the technique that used for matching the banknote or find the currency value/denomination of paper currency are Neural Network Process and Pattern Recognition.
+\newpage
+\tableofcontents 
+\newpage
+\chapter {Introduction}
+\section{Literature study}
+\paragraph{From the research it appears that disable people who have blinded have difficulty to count the banknotes by themselves, therefore this project devices can help them to specify the banknote and tell them by voice.}
+\section{Project Idea}
+\paragraph{Automatic Currency Detection is the device that capture the picture from the real banknotes by WEBCAM then processing the images by passing the filter including Sobel Edge detector, Average Filter, and Laplacian Filter via Raspberry PI and MATLAB from the combination of ROI (Region of Interest) method, Pattern Recognition, and Neural Network.}
+\section{Project Objective}
+\paragraph{- This project objective is to help the visual disable people to count the money they had by themselves.}
+\paragraph{- For the visual disable people, thus allowing them to autonomously deal with banknotes, particularly while accepting their money back during their day to day activities.}
+\paragraph{-Recording and monitoring information in real time.}
+	
+\chapter{System}
+\section{Overview and Theory}
+\paragraph{The first part is to identify the currency denomination through image processing. The second part is the oral output to notify the visually impaired person about the denomination of the note that he/she is currently having.}
+\section{Diagram}
+\begin{figure}[h]
+	\centering
+	\includegraphics{1.png}
+	\caption{\label{fig.1}Process}
+\end{figure}
+The development of this device is based on a webcam integrated with Raspberry Pi microcontroller and a speaker for sound output. The real time banknotes are captured and processed through different image processing techniques like edge detection, segmentation, and feature extraction and classification.
+
+Raspberry Pi is used as a processor which processes the image of the currency note captured by the web camera. The controlling code for web camera is written and stored in processor. Captured image is stored in memory. Now Raspberry Pi will process the image to identify the denomination of the currency. The processing algorithms and codes are written in PYTHON OpenCV.  	
+
+\section{Schematics Model}	
+
+\section{Actual Model of .....}	 
+
+ \clearpage \section{Hardware components} 
+\subsection{Raspberry Pi 3 Model B+}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=5cm,height=5cm]{2.png}
+	\caption{\label{fig.2}Raspberry Pi 3 Model B+} 
+	To do all the image processing activities
+\end{figure}
+\subsection{Webcam}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=5cm,height=5cm]{3.png}
+	\caption{\label{fig.3}Webcam} 
+	To scan the banknote for its denomination.
+\end{figure} \clearpage
+ \subsection{16X2 LCD Display}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=5cm,height=5cm]{4.png}
+	\caption{\label{fig.4}16X2 LCD Display} 
+	To  display  the  status of  each  stage  (that  is. scanning,  processing, connecting etc.)
+\end{figure}
+\subsection{Power Supply Board}
+\begin{figure}[h]
+	\centering
+	\includegraphics{5.png}
+	\caption{\label{fig.5}Power Supply Board}
+	For powering up the external circuits like Raspberry Pi, Speaker and the Webcam.
+\end{figure} \clearpage
+\subsection{Speaker}
+\begin{figure}[h]
+	\centering
+	\includegraphics[width=5cm, height=5 cm]{6.png}
+	\caption{\label{fig.6}Speaker}
+	To give the oral output of the currency note’s originality and denomination.
+\end{figure}
+\begin{figure}[h]
+	\centering
+	\includegraphics{7.png}
+	\caption{\label{fig.7}MATLAB Software}
+	\large To processing and compare the picture of banknote and identify the value of it.
+\end{figure} \clearpage
+\begin{figure}[h] 
+	\centering
+	\includegraphics[width= 5cm ,height= 5cm]{8.png}
+	\caption{\label{fig.8}Python Software}
+	\large Used for developing the image processing python code for Raspberry Pi
+\end{figure}
+\end{document}
